@@ -1,0 +1,91 @@
+<!DOCTYPE  html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Variant Viewer</title>
+</head>
+
+<body>
+
+<form>
+<input id="VCFUpload" type="file">
+</form>
+
+<canvas id="zoomGT" width=500, height=50 style="margin-left:250px"></canvas>
+
+<canvas id="zoomTrack" width=500 height=50 style="margin-left:250px"></canvas>
+
+<canvas id="geneTracks" width=1000 height=50></canvas>
+
+<canvas id="mainTrack" width=1000 height=200></canvas>
+
+<form style="float:right">
+<select id="chromMode">
+	<option value="0" selected>summary</option>
+	<option value="1">chr1</option>
+	<option value="2">chr2</option>
+	<option value="3">chr3</option>
+	<option value="4">chr4</option>
+	<option value="5">chr5</option>
+	<option value="6">chr6</option>
+	<option value="7">chr7</option>
+	<option value="8">chr8</option>
+	<option value="9">chr9</option>
+	<option value="10">chr10</option>
+	<option value="11">chr11</option>
+	<option value="12">chr12</option>
+	<option value="13">chr13</option>
+	<option value="14">chr14</option>
+	<option value="15">chr15</option>
+	<option value="16">chr16</option>
+	<option value="17">chr17</option>
+	<option value="18">chr18</option>
+	<option value="19">chr19</option>
+	<option value="20">chr20</option>
+	<option value="21">chr21</option>
+	<option value="22">chr22</option>
+	<option value="23">chrX</option>
+	<option value="24">chrY</option>
+</select>
+: <input type="text" size="10" id="start"> -  <input type="text" size="10" id="end">
+</form>
+
+<canvas id="covTrack" width=1000 height=50></canvas>
+
+<form style="float:right">
+Coverage:
+<input id="covRange" type="range" min="0"> 
+<input id="covText" type="text" size="5">
+</form>
+
+<canvas id="freqTrack" width=1000 height=50></canvas>
+
+<form style="float:right">
+Frequency:
+<input id="freqRange" type="range" min="0" max="100" value="0"> 
+<input id="freqText" type="text" size="5" value="0">
+</form>
+
+<canvas id="qualTrack" width=1000 height=50></canvas>
+
+<form style="float:right">
+Quality:
+<input id="qualRange" type="range" min="0"> 
+<input id="qualText" type="text" size="5">
+</form>
+
+<canvas id="biasTrack" width=1000 height=50></canvas>
+
+<form style="float:right">
+Strand Bias:
+<input id="biasRange" type="range" min="0" max="1" value="0.4"> 
+<input id="biasText" type="text" size="5" value="0.4">
+</form>
+
+<script type="text/javascript" src="sourceCode.js"></script>
+
+
+</body>
+
+</html>
